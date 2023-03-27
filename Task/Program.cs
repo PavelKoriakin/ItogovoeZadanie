@@ -20,3 +20,19 @@ int InputInt(string message)                                                //Н
     Environment.Exit(1);                                                    //Возвращаемся в систему (выход из программы) с кодом ошибки(1)
     return 0;                                                               //Для копиляции
 }
+
+string[] FillArray(int quantity)                                            //Название метода заполнения массива
+{
+    string[] array = new string[quantity];                                  //создание нового массива
+    string[] elem = { "world", "2", "hello", "geekBrains", "543",           //массив с элементами
+                    "73565", "15", "Moscow", "425672765", "disigne",
+                    "gim", "metr", "net", "da", "43", "master", "tor", 
+                    "Russia", "784", "rubeg"};
+
+    Random rnd = new Random();                                              //заполнение массива array рандомными элементами
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = elem[rnd.Next(0, 20)];
+    }
+    return array;
+}
