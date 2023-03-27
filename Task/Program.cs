@@ -53,3 +53,18 @@ string[] Array3Simbols(string[] array)                                      //Н
     Array.Resize(ref secondArray, count);                                    //Изменение размера массива под фактическое количество элементов
     return secondArray;
 }
+
+void PrintArray(string[] array)                                              //Название метода вывода
+{
+    System.Console.Write(array[0]);
+    for (int i = 1; i < array.Length; i++)
+    {
+        System.Console.Write(", " + array[i]);
+    }
+}
+
+int quantity = InputInt("Введите количество элементов от 1 до 20");          //Задание размера массива с клавиатуры
+string[] array = FillArray(quantity);                                        //Создание и заполнение массива
+PrintArray(array);                                                           //Вывод изначального массива
+System.Console.WriteLine();
+PrintArray(Array3Simbols(array));                                            //Вывод массива с элементами с 3 символами и меньше
