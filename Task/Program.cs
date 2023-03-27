@@ -36,3 +36,20 @@ string[] FillArray(int quantity)                                            //Н
     }
     return array;
 }
+
+string[] Array3Simbols(string[] array)                                      //Название метода поиска элементов с 3 символами и меньше
+{
+    string[] secondArray = new string[array.Length];                        //Новый массив
+    int count = 0;                                                          //Счетчик количества элементов нового массива
+    for (int i = 0, j = 0; i < array.Length; i++)
+    {
+        if (array[i].Length < 4)
+        {
+            secondArray[j] = array[i];                                       //Заполнение массива элементами с 3 символами и меньше
+            j++;
+            count++;
+        }
+    }
+    Array.Resize(ref secondArray, count);                                    //Изменение размера массива под фактическое количество элементов
+    return secondArray;
+}
