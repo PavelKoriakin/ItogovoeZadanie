@@ -23,11 +23,11 @@ int InputInt(string message)                                                //Н
 
 string[] FillArray(int quantity)                                            //Название метода заполнения массива
 {
-    string[] array = new string[quantity];                                  //создание нового массива
     string[] elem = { "world", "2", "hello", "geekBrains", "543",           //массив с элементами
                     "73565", "15", "Moscow", "425672765", "disigne",
                     "gim", "metr", "net", "da", "43", "master", "tor", 
                     "Russia", "784", "rubeg"};
+    string[] array = new string[quantity];                                  //создание нового массива
 
     Random rnd = new Random();                                              //заполнение массива array рандомными элементами
     for (int i = 0; i < array.Length; i++)
@@ -63,7 +63,7 @@ void PrintArray(string[] array)                                              //�
     }
 }
 
-int quantity = InputInt("Введите количество элементов от 1 до 20");          //Задание размера массива с клавиатуры
+int quantity = InputInt("Введите количество элементов");          //Задание размера массива с клавиатуры
 string[] array = FillArray(quantity);                                        //Создание и заполнение массива
 PrintArray(array);                                                           //Вывод изначального массива
 System.Console.WriteLine();
